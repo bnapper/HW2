@@ -1,0 +1,39 @@
+function setup() {
+  createCanvas(600, 400);
+}
+var x = 10;
+var changeInX = 5;
+var y = 3
+var changeInY=4
+
+function draw() {
+    background(2,2);
+
+	  fill(250,x, 200)
+    ellipse(x, 200, 40);
+	  
+	  fill(x, 100,640)
+	  ellipse(x, y,100,100)
+	
+	  y = y + changeInY;
+	  
+	  if (y < height) {
+			  changeInY = -1;
+		}
+	
+	  if (y > 0) {
+			  changeInY = .5;
+		}
+			
+
+    x = x + changeInX;
+
+    if (x > width) {
+        changeInX = -5;
+    }
+
+    if (x < 0) {
+        changeInX = 3;
+    }
+
+}
